@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho - Do Campo para a cidade</title>
+    <link rel="stylesheet" href="agrinho.css">
+</head>
+<body>
+    <header>
+        <h1>Agrinho - Do Campo para a Cidade</h1>
+        <p>Conheça mais sobre o Agrinho e seu impacto na educação e na sustentabilidade.</p>
+    </header>
+
+    <main>
+        <article>
+            <h2>O que é o Agrinho?</h2>
+            <p>O Agrinho é um programa desenvolvido pelo Serviço Nacional de Aprendizagem Rural (SENAR) e a Federação da Agricultura e Pecuária do Estado do Paraná (FAEP), voltado para a educação infantil e fundamental nas áreas rurais e urbanas.</p>
+
+            <h2>Objetivos do Programa</h2>
+            <ul>
+                <li>Promover a educação ambiental e a sustentabilidade</li>
+                <li>Estimular a cidadania e o protagonismo juvenil</li>
+                <li>Incentivar práticas saudáveis de alimentação</li>
+                <li>Valorizar o meio rural e suas tradições</li>
+            </ul>
+
+            <h2>Benefícios</h2>
+            <p>O Agrinho contribui para a formação de cidadãos conscientes, preocupados com o meio ambiente e com hábitos saudáveis, além de fortalecer o vínculo entre a escola, a família e a comunidade.</p>
+        </article>
+    </main>
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem em Container</title>
+    <link rel="stylesheet" href="agrinho.css">
+</head>
+<body>
+    <div class="container">
+        <img src="agricultor.png" alt="Exemplo de Imagem">
+    </div>
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Pop-up de Desenvolvedor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup-content {
+            display: none;
+        }
+
+        .popup-content.active {
+            display: block;
+        }
+
+        .popup-close {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .popup-close:hover {
+            color: red;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="button" onclick="showPopup()">Abrir Menu</button>
+
+    <div id="overlay" class="overlay" onclick="hidePopup()"></div>
+
+    <div id="popup" class="popup">
+        <span class="popup-close" onclick="hidePopup()">X</span>
+        <div class="menu">
+            <a href="#" onclick="showContent('developer')">Sobre o Desenvolvedor</a>
+            <a href="#" onclick="showContent('city')">Campo para Cidade</a>
+        </div>
+        <div id="developer" class="popup-content">
+            <h2>Informações sobre o Desenvolvedor</h2>
+            <p>Olá meu nome é Miguel e sou um estudante docurso de Des. de Sistemas, atualmente estou no segundo ano do ensino médio e essa é uma das minhas primeiras paginas</p>
+            <p>Email: miiguelmitrus@gmail.com</p>
+            <p>Contato: 44 99841-7081</p>
+        </div>
+        <div id="city" class="popup-content">
+            <h2>Campo para Cidade</h2>
+            <p>Monitoramento de solo e lavoura é muito importante para a inovação do meio agricola e que veio para impactar o mercado, um exemplo é a empresa Netword agro que é responsável no monitoramento aqui em Palotina, eles usam um sensor na terra que capta tudo que acontece no terreno, desde a qualidade de solo até a porcentagem de pragas, e para ajudar temos a o axilio de um drone que filma todo o campo que está sendo analisado para depois passar ao agricultor.
+                De qualquer forma, é uma inovação de suma importância para o futuro do agro e que vai render muito dinheiro a quem investir nesses projetos.</p>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+            document.querySelectorAll('.popup-content').forEach(el => el.classList.remove('active'));
+        }
+
+        function showContent(contentId) {
+            hidePopup(); // Hide the popup first to reset
+            document.getElementById('popup').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+            document.getElementById(contentId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
